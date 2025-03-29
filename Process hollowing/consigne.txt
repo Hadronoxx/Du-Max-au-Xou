@@ -1,0 +1,12 @@
+Process Hollowing: Etapes:
+    // 1. Create orig PE (main thread suspended)
+    // 2. Get remote vAddr of oldPE's PEB from PBI
+    // 3. Get remote vAddr of oldPE from PEB
+    // 4. Get new PE's virtualSize & headers data
+    // 5. Unmap original PE
+    // 6. Alloc mem at same place for new PE:
+    // 7. Copy newPE headers
+    // 8. copy newPE sections
+    // 9. Update entry point (RIP register)
+    // 10. Update vAddr on PEB (if changed)
+    // 11. Resume oldPE process (which is now newPE)
